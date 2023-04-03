@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>This is a Mouse event practice section</h3>
+    <button id="btn" onmouseover="changecolor()">Mouseover</button>
+    <button id="btn1" onmouseout="changecolor1()">Mouseout</button>
+    <button id="btn2" onclick="changecolor2()">onclick</button>
+    <button id="btn3" ondblclick="changecolor3()">ondoubleclick</button>
+    <button id="btn4" onfocus="changecolor4()">onfocus</button>
+    <input type="text" id="btn5" onblur="changecolor5()" >
+</body>
+<script>
+function changecolor(){
+    document.getElementById('btn').style.backgroundColor='red'
+}
+function changecolor1(){
+    document.getElementById('btn1').style.backgroundColor='green'
+}
+function changecolor2(){
+    document.getElementById('btn2').style.backgroundColor='yellow'
+}
+function changecolor3(){
+    document.getElementById('btn3').style.backgroundColor='black'
+}
+function changecolor4(){
+    document.getElementById('btn4').style.backgroundColor='blue'
+}
+function changecolor5(){
+   let x= document.getElementById('btn5');
+   x.value=x.value.toUpperCase();
+}
+</script>
+</html>

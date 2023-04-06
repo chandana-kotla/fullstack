@@ -20,7 +20,7 @@ div.addEventListener("mouseup", e => {
 
 div.addEventListener("dblclick", e => {
     console.log("You double clicked!");
-    div.style.backgroundColor = "purple";
+    div.style.backgroundColor = "Green";
 })
 
 div.addEventListener("contextmenu", e => {

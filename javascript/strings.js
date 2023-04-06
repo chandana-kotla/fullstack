@@ -1,0 +1,11 @@
+let x="javascript"
+let y=new String("javascript is a case sensitive language")
+console.log(typeof(x))
+console.log(typeof(y))
+console.log(x==y)
+console.log(x===y)
+console.log(y.length)
+console.log(x.length)
+console.log(x.slice(0,4))
+console.log(y.substring(0,10))
+console.log(x.substr(17,39))

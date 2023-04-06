@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select value="select a option" onchange="alert('this is on change!');">
+    <option>oneplus</option>
+    <option>samsung</option>
+    <option>vivo</option>
+</select>
+    <input type="text" id="inp" onblur="fun()">
+    <br>
+    <br>
+    <form action="" method="post" onsubmit="alert('the value is submitted')" >
+    <input type="text" name="first-name" required>
+    <input type="submit" value="submit">
+    <br>
+    <br>
+    <input type="text" onfocus="heighlight(this)">
+    <br>
+    <input type="text" onselect="selectfunction()">
+    <br>
+    <button onclick="clicked()">Click me</button>
+    <script>
+        function clicked() {
+            var buttonclick = document.getElementsByTagName('button');
+            document.backgroundColor='black'
+        }
+        function fun(){
+          var fo = document.getElementById("inp");
+          fo.value=fo.value.toUpperCase()
+        }
+        function heighlight(elem) {
+            elem.style.backgroundColor="skyblue";
+        }
+    </script>
+    </form>
+</body>
+</html>

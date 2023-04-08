@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array sorts</title>
+</head>
+<body>
+    <button onclick="myfunc()">Sortwithoutfunction</button>
+    <button onclick="myfunc1()">sortnumeracally</button>
+    <button onclick="myfunc12()">math max numb</button>
+    <p id="grow"></p>
+    <p id="grows"></p>
+    <p id="growing"></p>
+    <script>
+        //   const fruits=["pomegranate","Apple","grapes","orange","banana"]
+        //   let st=fruits.sort()
+        //   document.getElementById("grow").innerHTML=st;
+        //   let rev=fruits.reverse()
+        //   document.getElementById("grows").innerHTML=rev;
+        let con=[19,4,8,26,2]
+        document.getElementById("grow").innerHTML=con;
+        function myfunc(){
+            con.sort();
+            document.getElementById("grows").innerHTML=con;
+        }
+        function myfunc1(){
+            con.sort(function(a,b){return a-b});
+            document.getElementById("grows").innerHTML=con;
+        }
+         function myfunc12(arra){
+            return Math.max.apply(null,arra)
+        
+         }
+         document.getElementById("growing").innerHTML=myfunc12(con);
+        // con.sort(function(a,b){return b-a})
+        // document.getElementById("grows").innerHTML=con;
+    </script>
+</body>
+</html>

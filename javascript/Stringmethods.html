@@ -7,19 +7,38 @@
     <title>String methods</title>
 </head>
 <body>
-    <p>i am practicing string methods</p>
-    <button onclick="myFunction()">Try it</button>
+    <p>string methods</p>
+    <!-- <button onclick="myFunction()">Try it</button> -->
 
     <p id="demo"></p>
 
-    <script>
-        // let toup="this is a lowercase string";
+     <script>
+        let text = "IAMTRYING";
+        const myArr = text.split("");
+
+        text = "";
+       for (let i = 0; i < myArr.length; i++) {
+          text += myArr[i] + "<br>"
+       }
+        document.getElementById("demo").innerHTML = text;
+        // let h=g[4]
+        // let y=g.charAt(9)
+        // let text = "tree";
+        // text = text.padEnd(6,"e");
+        // document.getElementById("demo").innerHTML = text;
+        // let toup="this is a lowercase string"; 
         // toup=toup.toUpperCase();
         // document.getElementById("demo").innerHTML=toup;
-
-        let tolc="THIS IS A UPPERCASE STRING";
-        tolc=tolc.toLowerCase();
-        document.getElementById("demo").innerHTML=tolc;
+    //    let tofu="  TRIMMING  "
+    //    let tofu1=tofu.trim()
+    //    document.getElementById("demo").innerHTML="Length text1 = " + tofu.length + "<br>Length text2 = " + tofu1.length;
+        // let d1="chandana"
+        // let d2="peddireddy"
+        // let d3=d1.concat(" ",d2)
+        // document.getElementById("demo").innerHTML=d3;
+        // let tolc="THIS IS A UPPERCASE STRING";
+        // tolc=tolc.toLowerCase();
+        // document.getElementById("demo").innerHTML=tolc;
         // let v="TRY To FIND SOMETHING"
         // let len=v.length;
         // let spl=v.slice(7,11)

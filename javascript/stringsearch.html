@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Search methods</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let dumb="we are starting search methods in string";
+        let something=dumb.includes("search",12);
+        let do1=dumb.endsWith("search",22)
+        document.getElementById("demo").innerHTML=do1;
+        let bro= dumb.search("in")
+        let index=dumb.indexOf("search");
+        let index2=dumb.lastIndexOf("in");
+        let rth=dumb.match("ting");
+        // document.getElementById("demo").innerHTML=rth.length+" "+rth;
+        let numb="cats are animals.cats eat fish.cats are afraid of dogs";
+        const arry=numb.matchAll("cats");
+        // document.getElementById("demo").innerHTML=Array.from(arry);
+
+        let buddy=`this is backtick
+        it is used 
+        for the string`;
+        // document.getElementById("demo").innerHTML=buddy;
+        let lern="lets learn string literals";
+        let first="this is a string"
+        let test=`welcome ${lern},${first}`;
+        document.getElementById('demo').innerHTML=test;
+
+
+        let head="teamlunch";
+        let tag=["teammate","teammember","teamout"];
+        let html=`<h2>${head}</h2><ul>`;
+        tag.forEach(element => {
+                html+=`<li>${element}</li>`;
+            });
+            html+=`</ul>`;
+            document.getElementById("demo").innerHTML=html;
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Array objects</title>
+</head>
+<body>
+    <p id="gh"></p>
+    <script>
+        const cars=[
+            {type:"tata",year:2001},
+            {type:"inova",year:2010},
+            {type:"nano",year:2005},
+            {type:"audi",year:2018}
+        ];
+        cars.sort(function(a,b){return a.year-b.year});
+        document.getElementById("gh").innerHTML=
+        cars[0].type + " " + cars[0].year + "<br>" +
+        cars[1].type + " " + cars[1].year + "<br>" +
+        cars[2].type + " " + cars[2].year;
+    
+    </script>
+</body>
+</html>

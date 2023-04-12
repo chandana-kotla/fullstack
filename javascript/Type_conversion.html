@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type conversion</title>
+</head>
+<body>
+    <p id="tyco"></p>
+    <p id="tyco2"></p>
+    <p id="tyco3"></p>
+    <p id="tyco4"></p>
+    <script>
+        let x=123
+        // conveting to number and strings
+        document.getElementById("tyco").innerHTML=Number("3.45")+"<br>"+
+        Number(Math.PI)+"<br>"+
+        Number("chandu")+"<br>"+
+        Number("   ")+"<br>"+
+        parseFloat("6")+"<br>"+
+        parseInt("gown")+"<br>"+
+        String(x)+"<br>"+
+        String(123)+"<br>"+
+        String(100+23);
+       // Converting numbers to strings
+        document.getElementById("tyco2").innerHTML=x.toString()+"<br>"+
+        (123).toString()+"<br>"+
+        (100+23).toString()+"<br>"+
+        String(Date())+"<br>"+
+        Date().toString();
+    //    converting booleans to numbers and strings
+    document.getElementById("tyco3").innerHTML=Number(false)+"<br>"+
+    Number(true)+"<br>"+
+    String(true)+"<br>"+
+    String(false)+"<br>";
+   document.getElementById("tyco4").innerHTML=(5 + null) + "<br>"  +
+("5" + null) + "<br>" +
+("5" + 2) + "<br>" +
+("5" - 2) + "<br>" +
+("5" * "2") + "<br>" +
+("5" / "2") + "<br>"
+    </script>
+</body>
+</html>

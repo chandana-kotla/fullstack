@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Arrow Function</title>
+</head>
+<body>
+    <p id="grow"></p>
+    <p id="up"></p>
+    <script>
+         let hello=" ";
+        //  This is normal function
+         hello=function(){
+            return "hello world";
+         }
+         document.getElementById("grow").innerHTML=hello();
+        //  This is Arrow function
+        hello=()=>{
+            return "hello programming world";
+        }
+        document.getElementById("up").innerHTML=hello();
+    </script>
+</body>
+</html>

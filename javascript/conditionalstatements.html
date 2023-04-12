@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements</title>
+</head>
+<body>
+    <p id="you"></p>
+    <script>
+        // const hour=new Date().getHours();
+        const hour=new Date().getDay();
+        let greeting;
+        switch(hour){
+            case 0:
+                greeting="sunday";
+                break;
+            case 1:
+                greeting="Monday";
+                break;
+            case 2:
+                greeting="Tuesday";
+                break;
+            case 3:
+                greeting="Wednesday";
+                break;
+            case 4:
+                greeting="Thursday";
+                break;
+            case 5:
+                greeting="friday";
+                break;
+            case 6:
+                greeting="saturday";
+                break;
+            default:
+                greeting="lets find another time"
+        }
+
+    //     if(hour >17){
+    //         greeting= "It's Evening";
+    //     }else if(hour<12){
+    //         greeting= "It's Morning";
+    //     }
+    //     else{
+    //         greeting="It's not Evening";
+    //     }
+      document.getElementById("you").innerHTML=greeting;
+    </script>
+</body>
+</html>

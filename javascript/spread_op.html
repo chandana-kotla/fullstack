@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <p id="sp"></p>
+    <p id="sp1"></p>
+    <script>
+        const q1=["jan","feb","march","april"];
+        const q2=["may","june","july","August"];
+        const q3=["sept","oct","nov","dec"];
+        const year=[...q1,...q2,...q3];
+        document.getElementById("sp").innerHTML=year;
+
+        const numbers=[23,67,35,98,27];
+        let maxvalue=Math.max(...numbers);
+        document.getElementById("sp1").innerHTML=maxvalue;
+    </script>
+</body>
+</html>

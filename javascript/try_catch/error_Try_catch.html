@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errors Try and Catch and finally blocks</title>
+</head>
+<body>
+    
+    <input type="text" id="op">
+    <button id="op1" onclick="myfunction()">click here</button>
+    <p id="rog"></p>
+    <script>
+        // The try statement allows you to define a block of code to be tested for errors while it is being executed
+        // try {
+        //     addedalert("welcome buddy")
+        // } 
+        // // The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+        // catch (error) {
+        //     document.getElementById("rog").innerHTML=error;
+        // }
+        // The throw statement allows you to create a custom error.
+        function myfunction(){
+            const message=document.getElementById("rog");
+            message.innerHTML=" ";
+            let y=document.getElementById("op").value;
+            try {
+                if(y.trim() == " ") throw "empty";
+                if(isNaN(y)) throw "Not a number";
+                y=Number(y);
+                if(y<5) throw "too low";
+                if(y>20) throw "too high";
+            } catch (error) {
+                message.innerHTML="input is" + error;
+            }
+            // Block of code to be executed regardless of the try / catch result
+            finally {
+            document.getElementById("rog").value = "";
+        }
+        }
+    </script>
+</body>
+</html>

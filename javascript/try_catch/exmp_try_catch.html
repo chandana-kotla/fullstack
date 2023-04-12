@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of try catch</title>
+</head>
+<body>
+   <p id="jack"></p> 
+   <p id="jack1"></p> 
+   <p id="jack2"></p> 
+   <p id="jack3"></p> 
+   <p id="jack4"></p> 
+   <script>
+    let num=1;
+    // RangeError
+    try {
+        num.toPrecision(500);
+    } catch (error) {
+        document.getElementById("jack").innerHTML=error.name;
+    }
+
+    // Referance Error
+    let x=4;
+    try {
+        let x=y+1;
+    } catch (error) {
+        document.getElementById("jack1").innerHTML=error.name;
+    }
+
+    // SyntaxError
+    try {
+       eval(" alert('try na)");
+    } catch (error) {
+        document.getElementById("jack2").innerHTML=error.name;
+    }
+
+    // Type Error
+    let y=4;
+    try {
+        y.toUpperCase();
+    } catch (error) {
+        document.getElementById("jack3").innerHTML=error.name;
+    }
+
+    // URI (Uniform Resource Identifier) Error
+    try {
+        decodeURI("%%%6");
+    } catch (error) {
+        document.getElementById("jack4").innerHTML=error.name;
+    }
+   </script>
+</body>
+</html>

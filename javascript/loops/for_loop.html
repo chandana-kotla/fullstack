@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in js</title>
+</head>
+<body>
+    <p id="loop"></p>
+    <script>
+        let b=["brain","bucket","basket","bullet","biryani","butter","bottle","baloon"]
+        let b1=[]
+        // for loop
+        // for(let i=0;i<b.length;i++){
+        //    b1+=b[i]+"<br>"
+        // }
+
+        // for in loop
+        // Do not use for in over an Array if the index order is important.It is better to use a for loop,
+        //  a for of loop, or Array.forEach() when the order is important.
+        // for (let key in b) {
+        //     b1+=b[key]+"<br>"
+        // }
+
+        // for each loop
+    //  b.forEach(element => {
+    //     b1+=element+"<br>"
+    //     });
+
+    // for of
+        // for (const u  of b) {
+        //    b1+=u+"<br>" 
+        // }
+        let x="burger king"
+        let text="";
+        for (const y of x) {
+            text+=y+"<br>";
+        }
+        document.getElementById("loop").innerHTML=text;
+    </script>
+    
+</body>
+</html>

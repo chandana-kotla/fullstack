@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Regular exps</h1>
+    <title>Regular expression</title>
+</head>
+<body>
+    <p id="regexp"></p>
+    <p id="regexp1"></p>
+    <p id="regexp2"></p>
+    <p id="regexp3"></p>
+    <p id="regexp4"></p>
+    <p id="regexp5"></p>
+    <p id="regexp6"></p>
+    <script>
+        let cur="visit me tomorrow to meet me";
+        let cur1=cur.search("me")
+        document.getElementById("regexp").innerHTML=cur1;
+
+        // Performig case insensitive matching
+        let cur2=cur.search(/Tomorrow/i)
+        document.getElementById("regexp1").innerHTML=cur2;
+
+        let cur3=cur.replace("visit","meet");
+        document.getElementById("regexp2").innerHTML=cur3;
+
+        // Perform a global match (find all matches rather than stopping after the first match)
+        let cur4=cur.match(/me/g);
+        document.getElementById("regexp3").innerHTML=cur4;
+
+        // Perform multiline matching
+        let doo="\nIT is\nis it?";
+        let cur5=doo.match(/^is/m);
+        document.getElementById("regexp4").innerHTML=cur5;
+        // The test() method is a RegExp expression method.It searches a string for a pattern, and returns true or false, depending on the result.
+        document.getElementById("regexp5").innerHTML=/e/.test("The best things in life are free!");
+    
+        // The exec() method is a RegExp expression method.
+        //  It searches a string for a specified pattern, and returns the found text as an object.
+        document.getElementById("regexp6").innerHTML=/b/.exec("The best things in life are free!");
+
+        
+    </script>
+</body>
+</html>

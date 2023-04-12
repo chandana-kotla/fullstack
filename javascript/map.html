@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map </title>
+</head>
+<body>
+    <p id="lol"></p>
+    <p id="lol2"></p>
+    <script>
+        const vegies=new Map([["cabbage",50],
+    ["carrot",29],
+    ["curryleaves",15]
+]);
+let bru=[]
+// document.getElementById("lol").innerHTML=vegies.get("carrot");
+// document.getElementById("lol").innerHTML=vegies.size;
+// document.getElementById("lol").innerHTML=vegies.delete("carrot");
+// document.getElementById("lol").innerHTML=vegies.has("carrot");
+
+// for each 
+// vegies.forEach(function(value,key){
+// bru+=value+"="+key+"<br>";
+// });
+// document.getElementById("lol").innerHTML=bru;
+
+for(const x of vegies.entries()){
+    bru+=x+"<br>"
+}
+document.getElementById("lol").innerHTML=bru;
+const vegies1=new Map();
+vegies1.set("opera",2020)
+vegies1.set("chrome",2009)
+vegies1.set("edge",2012)
+vegies1.set("mozilla",2018)
+document.getElementById("lol2").innerHTML=vegies1.get("edge");
+    </script>
+</body>
+</html>

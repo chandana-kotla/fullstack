@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While loop</title>
+</head>
+<body>
+    <p id="popcorn"></p>
+    <script>
+        let b=["brain","bucket","basket","bullet","biryani","butter","bottle","baloon"]
+        let b1=[];
+        let i=0;
+        // while loop
+        // while(i<b.length){
+        //  b1+=b[i]+"<br>";
+        //  i++;
+        // }
+
+        // do while loop
+        do{
+            b1+=b[i]+"<br>";
+            i++;
+        }
+        while(i<b.length);
+        document.getElementById("popcorn").innerHTML=b1;
+    </script>
+</body>
+</html>

@@ -1,29 +1,20 @@
 import React from 'react'
-import Home from './UserApp/Home'
-import Userapp from './UserApp/Userapp'
-import { Link, BrowserRouter as Router,  Route } from 'react-router-dom'
-class App extends React.Component {
-    render() {
-        return <React.Fragment>
-            <Router>
-                <nav className='navbar navbar-dark bg-dark navbar-expand-lg'>
-                    <Link to="/" className='navbar-brand'>User App</Link>
-                    <div className='ml-auto'>
-                        <ul className='navbar-nav'>
-                            <li className='nav-list'><Link className='nav-link' to="/home">Home</Link></li>
-                            <li className='nav-list'><Link className='nav-link' to="/users">Users</Link></li>
-                        </ul>
-                    </div>
-                </nav>
-               
-                    <Route path="/home" Component={Home} />
-                    <Route path="/users" element={<Userapp />} />
-              
+import Navbar from './UserApp/Navbar'
+import UserApp from './UserApp/UserApp'
 
-            </Router>
-        </React.Fragment>
-    }
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
+const App = () => {
+  return (
+    <div>
+        <Router>
+      <Navbar/>
+      <Routes>
+        <Route path="/users" element={<UserApp/>}></Route>
+        
+      </Routes>
+      </Router>
+    </div>
+  )
 }
-
 
 export default App
